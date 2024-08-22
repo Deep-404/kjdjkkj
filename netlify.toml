@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/parse.html"
+status = 200
