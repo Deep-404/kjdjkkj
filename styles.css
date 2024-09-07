@@ -1,52 +1,75 @@
-body, html {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
 }
 
 .container {
     display: flex;
+    width: 100vw;
     height: 100vh;
 }
 
 .pane {
     flex: 1;
     padding: 20px;
-    box-sizing: border-box;
 }
 
-textarea, pre {
-    width: 100%;
-    height: calc(100% - 40px);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-sizing: border-box;
+.input-pane {
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+}
+
+.output-pane {
+    background-color: #fff;
+    overflow-y: auto;
 }
 
 textarea {
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     resize: none;
-    font-family: monospace;
 }
 
 pre {
-    background-color: #282c34;
-    color: #61dafb;
-    overflow: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
-    font-family: monospace;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 
-h2 {
-    margin-top: 0;
-    color: #333;
-    text-align: center;
+.json-entry {
+    margin-left: 20px;
 }
 
-.pane:nth-child(2) {
-    background-color: #f8f9fa;
+.json-key {
+    font-weight: bold;
 }
+
+.collapsible {
+    color: blue;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
